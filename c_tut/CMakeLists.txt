@@ -4,7 +4,11 @@ project(c_tut)
 
 set(CMAKE_C_STANDARD 99)
 
-SET(CMAKE_C_FLAGS "-m64 -g -O0 -D_DEBUG -Wall")
+if(MSVC)
+	SET(CMAKE_C_FLAGS "/DEBUG /Od /W4")
+else()
+	SET(CMAKE_C_FLAGS "-m64 -g -O0 -D_DEBUG -Wall -Wextra")
+endif()
 
 include_directories(AFTER src)
 
