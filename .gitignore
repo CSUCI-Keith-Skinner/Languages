@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+/c_tut/src/array.dSYM/Contents
+/.vs
+/c_tut/.vs
+/c_tut/c_tut.sln
