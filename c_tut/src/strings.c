@@ -4,7 +4,7 @@ int main()
 {
     char msg[10];          /* array of 10 chars */
     char *p;               /* pointer to a char */
-    char msg2[] = "Hello"; /* msg2 = 'H''e''l''l''o''\0' */
+    char msg2[] = "Hello"; /* msg2 = {'H','e','l','l','o','\0'} */
 
     // msg = "Bonjour"; /* ERROR. msg has a const address.*/
     p = "Bonjour"; /* address of “Bonjour” goes into p */

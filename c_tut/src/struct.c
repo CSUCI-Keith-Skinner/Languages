@@ -1,16 +1,23 @@
+// TODO : the main program should read in the data for a number of employees by first prompting the user for the number of employees, allocating sufficient space for the employees in the array, and then calling the add_employee() function to populate the current element of the array.
 #include <stdio.h>
+#include <stdlib.h>
+#include "person.h"
 
-struct birthday {
-    int month;
-    int day;
-    int year;
-};
+#define EMPLOYEE_COUNT 100
 
-int main() {
-    struct birthday mybday;    /* - no ‘new’ needed ! */
-    /* then, it’s just like Java ! */
-    scanf("%d/%d/%d", &mybday.month, &mybday.day, &mybday.year);
-    printf("I was born on %d/%d/%d\n", mybday.month, mybday.day, mybday.year);
+int main() 
+{
+	PERSON * employees[EMPLOYEE_COUNT] = { NULL };
+	printf("How many employees (max 100)?: ");
+	char * input[BUFSIZ];
+	fgets(input, BUFSIZ, stdin);
+	int size = 0;
+	sscanf(input, "%d", &size);
+	
+	for (int i = 0; i < size; ++i) {
+		employees[i] = malloc(sizeof(PERSON));
+		add_employee(employees[i]);
+	}
 
-    return 0;
+	display_all_employees(employees);
 }
