@@ -1,10 +1,7 @@
 // TODO - DONE : Modify the code in types.c, so that the program asks also for the number of faculty, and then prints the student-to-faculty ratio for CSUCI. You will need to modify the types of the variables and use proper format string in printf(), so the precision is limited to one position after the dot.
-#include <../KeepRunning.h> //delete
 #include <stdio.h>
 
 int main(void) {
-	KeepRunning(); //delete
-    
 	int nstudents = 0; /* Initialization, required */
     printf("How many students does CSUCI have?: ");
     scanf("%d", &nstudents);  /* Read input */

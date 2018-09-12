@@ -1,11 +1,15 @@
-//TODO - DONE: Modify array.c so that the program reads a number of doubles from the standard input and computes their average. The number of the doubles to process should be read from the standard input. It will be followed by the corresponding number of doubles. Your program should create an array with MAX_NUM_OF_CELLS many elements, but then verify that the number entered by the user is no larger than the limit. If it is, then a warning message should be printed, and the number should be assumed to be the said MAX_NUM_OF_CELLS.
-#include <../KeepRunning.h> //delete
+// TODO - DONE: Modify array.c so that the program reads a number of doubles from the standard input and
+// computes their average. The number of the doubles to process should be read from the standard input.
+// It will be followed by the corresponding number of doubles. Your program should create an array with
+// MAX_NUM_OF_CELLS many elements, but then verify that the number entered by the user is no larger than
+// the limit. If it is, then a warning message should be printed, and the number should be assumed to be
+// the said MAX_NUM_OF_CELLS.
+
 #include <stdio.h>
 
 #define MAX_NUM_OF_CELLS 128
 
 int main(void) {
-	KeepRunning(); //delete
 
     double number[MAX_NUM_OF_CELLS];
 	int count = 0;

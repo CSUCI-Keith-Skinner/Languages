@@ -1,4 +1,7 @@
-// TODO : the main program should read in the data for a number of employees by first prompting the user for the number of employees, allocating sufficient space for the employees in the array, and then calling the add_employee() function to populate the current element of the array.
+// TODO : the main program should read in the data for a number of employees by first
+// prompting the user for the number of employees, allocating sufficient space for the
+// employees in the array, and then calling the add_employee() function to populate the
+// current element of the array.
 #include <stdio.h>
 #include <stdlib.h>
 #include "person.h"

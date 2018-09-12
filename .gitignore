@@ -34,3 +34,7 @@
 /.vs
 /c_tut/.vs
 /c_tut/c_tut.sln
+
+#CLion
+.idea/**
+*/.idea/**

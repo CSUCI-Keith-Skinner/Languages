@@ -1,12 +1,10 @@
 //
-#include <../KeepRunning.h> //delete
 #include <stdio.h>
 
 void swap_integers(int *, int *);
 void swap_strings(char **, char **);
 
 int main() {
-	KeepRunning();//delete
     int num1 = 5, num2 = 10;
 
     swap_integers(&num1, &num2);

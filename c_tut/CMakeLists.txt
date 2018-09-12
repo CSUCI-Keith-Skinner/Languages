@@ -3,12 +3,7 @@ cmake_minimum_required(VERSION 3.8)
 project(c_tut)
 
 set(CMAKE_C_STANDARD 99)
-
-if(MSVC)
-	SET(CMAKE_C_FLAGS "/DEBUG /Od /W4")
-else()
-	SET(CMAKE_C_FLAGS "-m64 -g -O0 -D_DEBUG -Wall -Wextra")
-endif()
+set(CMAKE_C_FLAGS "-m64 -g -O0 -D_DEBUG -Wall -Wextra -Wpedantic")
 
 include_directories(AFTER src)
 

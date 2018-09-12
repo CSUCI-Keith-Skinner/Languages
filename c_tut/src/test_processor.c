@@ -1,5 +1,4 @@
 
-#include <../KeepRunning.h>
 #include <stdio.h>
 #include <string.h>
 #include "processor.h"
@@ -26,7 +25,7 @@ void print_stats(int counts[4]) {
 }
 
 int main() {
-	char * input_buffer[BUFSIZ] = { NULL };
+	char input_buffer[BUFSIZ] = { };
 	int last_process = 0;
 	int counts[4] = { 0 };
 	while (strcmp("END", input_buffer) != 0) {

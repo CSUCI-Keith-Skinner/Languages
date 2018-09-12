@@ -1,5 +1,6 @@
-//Extend the code in file.c, so that the program reads the data from the data.txt file and writes it to a new file. The name of the new file should be requested from the user.
-#include <../KeepRunning.h> //delete
+// Extend the code in file.c, so that the program reads the data
+// from the data.txt file and writes it to a new file.
+// The name of the new file should be requested from the user.
 #include <stdio.h>
 
 #define FILE_NAME "data.txt"
@@ -8,7 +9,6 @@
 #define OUTPUT_FILE_ERROR 2
 
 int main(void) {
-	KeepRunning(); //delete
 
 	/* file handles */
 	FILE * input_file = fopen(FILE_NAME, "r");
