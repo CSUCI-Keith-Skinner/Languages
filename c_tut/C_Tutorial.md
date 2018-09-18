@@ -18,9 +18,11 @@ Examine the code of the program and verify that the output reflects the program'
 Modify the code in types.c, so that the program asks also for the number of faculty, and then prints the student-to-faculty ratio for CSUCI. You will need to modify the types of the variables and use proper format string in printf(), so the precision is limited to one position after the dot.
 You may use man pages to get help on C functions and on system calls. You many want to explore:
 
->   $ man printf
->   $ man scanf
->   $ man getc
+```
+$ man printf
+$ man scanf
+$ man getc
+```
 
 You may also get the same help inside CLion by positioning the cursor on a function and then using F1 key.
 
@@ -64,13 +66,13 @@ Using strings.c, pointer.c, and mem-alloc.c as prototypes, implement a new progr
 You should create an array of pointers to strings that will hold pointers to the read words. Set the size of the array to an arbitrary number of the words that the program can process; that number should be defined with #define. To start with, the array will not have any valid pointers, so you must allocate space to hold read words with malloc(). Each word will have a different length, so you must use a buffer (an array of characters) that will hold the line that is read from the input with scanf(), and then use strlen() to find out how long is the word in the buffer. With that length, you will know for how large storage you should ask in malloc(), so that it can hold the word. Keep in mind that strlen() returns the number of characters in the buffer excluding the end-of-string marker ('\0'); therefore, you must request one character more from malloc(). Subsequently, use strcpy() to copy the new word from the buffer into the newly allocated space and set the current element of the words array to point to that space.
 You many want to explore:
 
->   ```
->   $ man scanf
->   $ man malloc
->   $ man strlen
->   $ man strcpy
->   $ man strcmp
->   ```
+```
+$ man scanf
+$ man malloc
+$ man strlen
+$ man strcpy
+$ man strcmp
+```
 
 # Question 6
 
@@ -85,11 +87,13 @@ Please note that the executables in our configuration of CLion are created in th
 You can overwrite the default location of input and output files. For example, to use a file in the src directory, prefix the file name with ../src/.
 You many want to explore:
 
->   $ man fgetc
->   $ man fputc
->   $ man fopen
->   $ man fclose
->   $ man scanf
+```
+$ man fgetc
+$ man fputc
+$ man fopen
+$ man fclose
+$ man scanf
+```
 
 # Question 7
 
