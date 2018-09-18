@@ -8,8 +8,8 @@ void add_employee(PERSON * person) {
 	printf(format, "NAME");
 	fgets(person->name, BUFSIZ, stdin);
 	printf(format, "AGE");
-	fgets(input, BUFSIZ, stdin);
-	sscanf(input, "%d", &(person->age));
+	fgets(*input, BUFSIZ, stdin);
+	sscanf(*input, "%d", &(person->age));
 	printf(format, "HEIGHT");
 	fgets(input, BUFSIZ, stdin);
 	sscanf(input, "%f", &(person->height));
