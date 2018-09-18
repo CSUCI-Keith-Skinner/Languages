@@ -1,17 +1,11 @@
-cmake_minimum_required(VERSION 3.8)
+#Keith Skinner
+#Lab 01: C Tutorial
 
+cmake_minimum_required(VERSION 3.10)
 project(c_tut)
 
-set(CMAKE_C_STANDARD 99)
-<<<<<<< HEAD
-if (CMAKE_COMPILER_IS_GNUCC)
-	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m64 -g -O0 -D_DEBUG -Wall -Wextra -Wpedantic")
-endif()
-=======
-set(CMAKE_C_FLAGS "-m64 -g -O0 -D_DEBUG -Wall -Wextra -Wpedantic")
->>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
-
-include_directories(AFTER src)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m64 -g -O0 -D_DEBUG -Wall -Wextra -Wpedantic")
 
 add_executable(argc-argv src/argc-argv.c)
 add_executable(array src/array.c)
@@ -49,6 +43,3 @@ add_executable(test_processor src/test_processor.c src/processor.c)
 #  Question 8: calc.c
 #  Question 9: person.h person.c struct.c
 #  Question 10: test_processor.c processor.c processor.h
-
-
-
