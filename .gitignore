@@ -30,7 +30,33 @@
 *.exe
 *.out
 *.app
-/c_tut/src/array.dSYM/Contents
-/.vs
-/c_tut/.vs
-/c_tut/c_tut.sln
+
+# CLion ide settings
+.idea/**
+c_tut/.idea/**
+linked_lists/.idea/**
+scanner_1/.idea/**
+scanner_2/.idea/**
+parser/.idea/**
+
+# VSCode ide settings 
+.vs/**
+c_tut/.vs/**
+linked_lists/.vs/**
+scanner_1/.vs/**
+scanner_2/.vs/**
+parser/.vs/**
+
+# Build directories
+c_tut/build/**
+linked_lists/build/**
+scanner_1/build/**
+scanner_2/build/**
+parser/build/**
+
+# Bin directories
+c_tut/bin/**
+linked_lists/bin/**
+scanner_1/bin/**
+scanner_2/bin/**
+parser/bin/**
