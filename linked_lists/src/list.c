@@ -1,5 +1,6 @@
 #include "list.h"
 
+<<<<<<< HEAD
 LIST ** addNode(LIST **tail, void *data)
 {
     LIST * node = (LIST*)calloc(1, sizeof(LIST));
@@ -7,6 +8,15 @@ LIST ** addNode(LIST **tail, void *data)
     *tail = node;
     tail = &(node->next);
 	return tail;
+=======
+void addNode(LIST ***tail, void *data)
+{
+    LIST * node = (LIST*)calloc(1, sizeof(LIST));
+    node->data = data;
+
+    **tail = node;
+    *tail = &(node->next);
+>>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
 }
 
 int isEmpty(LIST *head) {
@@ -18,12 +28,21 @@ bool isLastElement(LIST **tail, LIST **n) {
 }
 
 
+<<<<<<< HEAD
 void *removeNode(LIST ***tail, LIST **n)
 {
     void *data = NULL;
     if (n && *n) {
         if (isLastElement(*tail, n))
             *tail = n;
+=======
+void *removeNode(LIST **tail, LIST **n)
+{
+    void *data = NULL;
+    if (n) {
+        if (isLastElement(tail, n))
+            tail = n;
+>>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
 
         LIST *temp = *n;
         data = temp->data;
@@ -33,6 +52,7 @@ void *removeNode(LIST ***tail, LIST **n)
     return data;
 }
 
+<<<<<<< HEAD
 LIST ** findNode(LIST **head, void *obj, bool (*compare)(void *, void *))
 {
 	char * cobj = (char *)obj;
@@ -61,4 +81,18 @@ void deleteList(LIST ** head, void(*deleteData)(void *))
 		free(temp);
 	}
 	*head = NULL;
+=======
+LIST **findNode(LIST *head, void *obj, bool (*compare)(void *, void *))
+{
+    LIST ** found = NULL;
+    if (!isEmpty(head)) {
+        LIST ** iter = &head;
+        while (found == NULL && *iter != NULL) {
+            if (compare(obj, (**iter).data))
+                found = iter;
+            iter = &((**iter).next);
+        }
+    }
+    return found;
+>>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
 }

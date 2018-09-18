@@ -3,9 +3,13 @@ cmake_minimum_required(VERSION 3.8)
 project(c_tut)
 
 set(CMAKE_C_STANDARD 99)
+<<<<<<< HEAD
 if (CMAKE_COMPILER_IS_GNUCC)
 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m64 -g -O0 -D_DEBUG -Wall -Wextra -Wpedantic")
 endif()
+=======
+set(CMAKE_C_FLAGS "-m64 -g -O0 -D_DEBUG -Wall -Wextra -Wpedantic")
+>>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
 
 include_directories(AFTER src)
 

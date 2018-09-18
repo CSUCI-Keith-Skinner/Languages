@@ -2,6 +2,10 @@
 //Lab 4: scanner 2
 
 #include <string.h>
+<<<<<<< HEAD
+=======
+#include <regex.h>
+>>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
 #include <stdlib.h>
 #include <ctype.h>
 #include "table.h"
@@ -9,8 +13,12 @@
 
 
 // bypasses whitespace characters and returns the first non-ws up until end.
+<<<<<<< HEAD
 char *skipws(char **line, char const *const end)
 {//assumes contiguous string.
+=======
+char *skipws(char **line, char const *const end) {//assumes contiguous string.
+>>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
     while (*line < end && isspace(**line))
         ++(*line);
     return *line;
@@ -18,8 +26,12 @@ char *skipws(char **line, char const *const end)
 
 //only called once.
 //lets me have a run-time list of all valid characters
+<<<<<<< HEAD
 void readHeader(TRANS_TABLE *table, char *firstLine, long len)
 {
+=======
+void readHeader(TRANS_TABLE *table, char *firstLine, long len) {
+>>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
     table->header = (char *) malloc(BUF_SIZE);
     table->columns = 0;
     char const *const end = firstLine + len;
@@ -31,8 +43,12 @@ void readHeader(TRANS_TABLE *table, char *firstLine, long len)
 }
 
 //create a new row in the table.
+<<<<<<< HEAD
 int *createRow(TRANS_TABLE *trans)
 {
+=======
+int *createRow(TRANS_TABLE *trans) {
+>>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
     const size_t rowLen = sizeof(int) * (trans->columns + 1);
     trans->table[trans->rows] = (int *) malloc(rowLen);
     int *row = trans->table[trans->rows];

@@ -2,11 +2,27 @@
 // parser declarations
 //
 
+#ifndef PARSER_PARSER_H
+#define PARSER_PARSER_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "scanner.h"
 
-typedef enum {IDENTIFIER = 1, NUMBER, EXPR, TERM, ASSIGN_STMT, REPEAT_STMT, PRINT_STMT, FACTOR, ADDOP, MULTOP, PROGRAM, STATEMENT} AST_NODE_TYPE;
+typedef enum {
+    IDENTIFIER = 1,
+    NUMBER,
+    EXPR,
+    TERM,
+    ASSIGN_STMT,
+    REPEAT_STMT,
+    PRINT_STMT,
+    FACTOR,
+    ADDOP,
+    MULTOP,
+    PROGRAM,
+    STATEMENT
+} AST_NODE_TYPE;
 
 typedef struct ast_node
 {
@@ -34,3 +50,6 @@ AST_NODE *factor(TOKEN *currToken);
 AST_NODE *id(TOKEN *currToken);
 AST_NODE *number(TOKEN *currToken);
 void error();
+
+
+#endif //PARSER_PARSER_H

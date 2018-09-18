@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 //TODO: Add a function swap_strings() that will swap two strings. 
 //		The new code should include:
 //		 - a declaration of the new function,
 //		 - declarations of two strings initialized to some arbitrary values, and
 //		 - the definition of the function that swaps the strings.
 
+=======
+//
+>>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
 #include <stdio.h>
 
 void swap_integers(int *, int *);
