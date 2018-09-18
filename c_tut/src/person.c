@@ -4,17 +4,18 @@
 
 void add_employee(PERSON * person) {
 	char * input[BUFSIZ];
-	printf("\n    NAME: ");
-	gets(person->name, NAME_LEN);
-	printf("     AGE: ");
+	char * format = "%10s: ";
+	printf(format, "NAME");
+	fgets(person->name, BUFSIZ, stdin);
+	printf(format, "AGE");
 	fgets(input, BUFSIZ, stdin);
 	sscanf(input, "%d", &(person->age));
-	printf("  HEIGHT: ");
+	printf(format, "HEIGHT");
 	fgets(input, BUFSIZ, stdin);
 	sscanf(input, "%f", &(person->height));
-	printf("BIRTHDAY: ");
+	printf(format, "BIRTHDAY");
 	fgets(input, BUFSIZ, stdin);
-	sscanf(input, "%2d/%2d/%2d",
+	sscanf(input, "%2d/%2d/%4d",
 		&(person->birth.month),
 		&(person->birth.day),
 		&(person->birth.year)

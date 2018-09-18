@@ -1,6 +1,5 @@
 //TODO - DONE : The new program should: Read words from the standard input in a loop until a word END is read count all read words store the words in an array of strings print the number of read words in the first line followed by the whole array with one word per line.
 
-#include <../KeepRunning.h> //delete
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -10,8 +9,6 @@
 
 int main(void) 
 {
-	KeepRunning(); //delete
-
 	char ** words = (char **)malloc(WORDS_COUNT * sizeof(char*));
 	char input[1024] = { NULL };
 	int count = 0;

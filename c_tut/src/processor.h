@@ -18,13 +18,13 @@ typedef struct {
 	} data;
 } MESSAGE;
 
-#define CACHE_SIZE 5
+#define CACHE_SIZE 2
 MESSAGE message_cache[CACHE_SIZE];
 extern int message_count;
 
-void message_dispatcher(int counts[4]);
-void process_message(MESSAGE * message, int counts[4]);
-void add_message_to_cache(char * buf);
+void message_dispatcher(int count, int counts[4]);
+void process_message(MESSAGE * message);
+int add_message_to_cache(int count, char * buf);
 
 
 #endif //PROCESSOR_H

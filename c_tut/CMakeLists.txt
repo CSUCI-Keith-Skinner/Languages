@@ -3,11 +3,8 @@ cmake_minimum_required(VERSION 3.8)
 project(c_tut)
 
 set(CMAKE_C_STANDARD 99)
-
-if(MSVC)
-	SET(CMAKE_C_FLAGS "/DEBUG /Od /W4")
-else()
-	SET(CMAKE_C_FLAGS "-m64 -g -O0 -D_DEBUG -Wall -Wextra")
+if (CMAKE_COMPILER_IS_GNUCC)
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -m64 -g -O0 -D_DEBUG -Wall -Wextra -Wpedantic")
 endif()
 
 include_directories(AFTER src)
@@ -29,11 +26,25 @@ add_executable(ptr-func src/ptr-func.c)
 add_executable(ptr-problems src/ptr-problems.c)
 add_executable(ref-arg src/ref-arg.c)
 add_executable(strings src/strings.c)
-#add_executable(struct src/struct.c)
 add_executable(type-conv src/type-conv.c)
-add_executable(types src/types.c)
 
+add_executable(types src/types.c)
 add_executable(words src/words.c)
 add_executable(calc src/calc.c)
 add_executable(struct src/struct.c src/person.c)
 add_executable(test_processor src/test_processor.c src/processor.c)
+
+#edited files:
+#  Question 1: 
+#  Question 2: types.c
+#  Question 3: if-then-else.c
+#  Question 4: array.c
+#  Question 5: words.c
+#  Question 6: file.c data.txt
+#  Question 7: ptr-arg-2.c
+#  Question 8: calc.c
+#  Question 9: person.h person.c struct.c
+#  Question 10: test_processor.c processor.c processor.h
+
+
+

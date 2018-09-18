@@ -1,12 +1,15 @@
-//
-#include <../KeepRunning.h> //delete
+//TODO: Add a function swap_strings() that will swap two strings. 
+//		The new code should include:
+//		 - a declaration of the new function,
+//		 - declarations of two strings initialized to some arbitrary values, and
+//		 - the definition of the function that swaps the strings.
+
 #include <stdio.h>
 
 void swap_integers(int *, int *);
 void swap_strings(char **, char **);
 
 int main() {
-	KeepRunning();//delete
     int num1 = 5, num2 = 10;
 
     swap_integers(&num1, &num2);
@@ -21,9 +24,7 @@ int main() {
 }
 
 void swap_integers(int *n1, int *n2) { /* passed and returned by using values of pointers */
-    int temp;
-
-    temp = *n1;
+    int temp = *n1;
     *n1 = *n2;
     *n2 = temp;
 }
