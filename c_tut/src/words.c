@@ -10,12 +10,12 @@
 int main(void) 
 {
 	char ** words = (char **)malloc(WORDS_COUNT * sizeof(char*));
-	char input[1024] = { NULL };
+	char input[1024] = "";
 	int count = 0;
 
 	printf("Enter words\n");
 	while (scanf("%s", input) && strcmp(input, "END") != 0) {
-		int length = strlen(input);
+		size_t length = strlen(input);
 		words[count] = malloc(length + 1);
 		strcpy(words[count], input);
 		++count;
