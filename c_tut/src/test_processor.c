@@ -24,13 +24,8 @@ void print_stats(int message_count, int batches, int counts[4]) {
 }
 
 int main() {
-<<<<<<< HEAD
 	char input_buffer[BUFSIZ] = {0};
 	int count = 0;
-=======
-	char input_buffer[BUFSIZ] = { };
-	int last_process = 0;
->>>>>>> 181e6fdbcd2c7fe97a43bef927968bec50327a79
 	int counts[4] = { 0 };
 	int batches = 0;
 	bool stop = false;
