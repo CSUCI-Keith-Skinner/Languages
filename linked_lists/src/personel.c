@@ -17,6 +17,7 @@ void setPersonName(PERSON * p, const char *prompt, char * name, const int SIZE) 
     p->name = (char *)realloc(p->name, length);
     strcpy(p->name, name);
 }
+
 void setPersonAge(PERSON *p, const char *prompt, char *input_buffer, const int SIZE, char **buff_pos) {
     do {
         printf(prompt, "Age");
@@ -33,15 +34,20 @@ void setPersonHeight(PERSON *p, const char * prompt, char * input_buffer, const 
     } while (p->height <= 0.0);
 }
 
+bool validBirthday(PERSON * p)
+{
+    return isBetween(1, 12, p->birth.month)
+             && isBetween(1, 31, p->birth.day)
+             && isBetween(1900, 2018, p->birth.year);
+}
+
 void setPersonBirthday(PERSON *p, const char * prompt, char * input_buffer, const int SIZE) {
     do {
         printf(prompt, "Birthday");
         fgets(input_buffer, SIZE, stdin);
         sscanf(input_buffer, "%2d/%2d/%04d",
                &p->birth.month, &p->birth.day, &p->birth.year);
-    } while (!isBetween(1, 12, p->birth.month) ||
-             !isBetween(1, 31, p->birth.day) ||
-             !isBetween(1900, 2018, p->birth.year));
+    } while (!validBirthday(p));
 }
 
 //p must be pointing to either NULL or a valid person.
