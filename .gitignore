@@ -1,4 +1,5 @@
 # CLion ide settings
+.DS_Store/**
 .idea/**
 c_tut/.idea/**
 linked_lists/.idea/**
