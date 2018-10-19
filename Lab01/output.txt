@@ -1,0 +1,36 @@
+/**
+* Name: Keith Skinner
+* Lab: Lab 1 C Tutorial
+* Date: 09/18/18
+**/
+
+:2 123 45 6 7890 87592
+
+:4 aaaaa bbbbb ccccc ddddd eeeee
+
+
+TYPE 2: 123,45,6,7890,87592
+TYPE 4: aaaaa bbbbb ccccc ddddd eeeee
+
+:1 asdfasdfdfdfd
+
+:3 123.34 23.12345 5439.234 0.000231
+
+TYPE 1: asdfasdfdfdfd
+TYPE 3: 123.339996/23.123449/5439.233887/0.000231
+
+:1 dfgsadf
+
+:END
+
+TYPE 1: dfgsadf
+
+Number of message batches: 3
+Messages processed:
+Total: 5
+Type 1 : 2
+Type 2 : 1
+Type 3 : 1
+Type 4 : 1
+
+Process finished with exit code 0
