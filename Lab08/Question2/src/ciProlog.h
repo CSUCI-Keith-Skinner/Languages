@@ -1,3 +1,9 @@
+/**
+* Name: Keith Skinner
+* Lab: Lab 8 Introduction to Bison
+* Date: 10/30/2018
+**/
+
 #ifndef __ciProlog_h_
 #define __ciProlog_h_
 

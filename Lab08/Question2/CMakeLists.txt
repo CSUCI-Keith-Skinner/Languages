@@ -1,3 +1,9 @@
+# /**
+# * Name: Keith Skinner
+# * Lab: Lab 8 Introduction to Bison
+# * Date: 10/30/2018
+# **/
+
 cmake_minimum_required(VERSION 3.8)
 
 project(ciProlog)

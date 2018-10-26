@@ -1,3 +1,9 @@
+/**
+* Name: Keith Skinner
+* Lab: Lab 8 Introduction to Bison
+* Date: 10/30/2018
+**/
+
 #include "ciProlog.h"
 
 // the knowledge base
