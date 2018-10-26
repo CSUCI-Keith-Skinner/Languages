@@ -1,3 +1,9 @@
+/**
+* Name: Keith Skinner
+* Lab: Lab 8 Introduction to Bison
+* Date: 10/30/2018
+**/
+
 #ifndef __calc_h_
 #define __calc_h_
 
@@ -11,8 +17,8 @@
 #include "calcParser.h"
 
 // declaring the following Bison functions limits compiler warnings
-int yyparse(void);
-int yylex(void);
+int  yyparse(void);
+int  yylex(void);
 void yyerror(char *);
 
 // declaration of the function to calculate s-expressions

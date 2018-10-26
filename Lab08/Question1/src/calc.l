@@ -1,3 +1,9 @@
+/**
+* Name: Keith Skinner
+* Lab: Lab 8 Introduction to Bison
+* Date: 10/30/2018
+**/
+
 %option noyywrap
 %option nounput
 %option noinput
@@ -27,19 +33,16 @@ func "neg"|"abs"|"exp"|"sqrt"|"add"|"sub"|"mult"|"div"|"remainder"|"log"|"pow"|"
     yylval.
     sval = (char *) malloc(strlen(yytext) * sizeof(char));
     strcpy(yylval.sval, yytext);
-    fprintf(stderr,
-    "lex: FUNC sval = %s\n", yylval.sval);
+    fprintf(stderr, "lex: FUNC sval = %s\n", yylval.sval);
     return FUNC;
 }
 "(" {
-    fprintf(stderr,
-    "lex: LPAREN\n");
+    fprintf(stderr, "lex: LPAREN\n");
     return LPAREN;
 }
 
 ")" {
-    fprintf(stderr,
-    "lex: RPAREN\n");
+    fprintf(stderr, "lex: RPAREN\n");
     return RPAREN;
 }
 
@@ -50,7 +53,7 @@ func "neg"|"abs"|"exp"|"sqrt"|"add"|"sub"|"mult"|"div"|"remainder"|"log"|"pow"|"
     return EOL;
 }
 
-[|\t]; /* skip whitespace */
+[[:space:]] {}; /* skip whitespace */
 
 . {
     printf("ERROR: invalid character: >>%s<<\n", yytext);
@@ -63,7 +66,7 @@ func "neg"|"abs"|"exp"|"sqrt"|"add"|"sub"|"mult"|"div"|"remainder"|"log"|"pow"|"
 int main(void)
 {
 
-    // freopen("/dev/null", "w", stderr); // except for this line that can be uncommented to throw away debug printouts
+    freopen("/dev/null", "w", stderr); // except for this line that can be uncommented to throw away debug printouts
 
     char *s_expr_str = NULL;
     size_t s_expr_str_len = 0;
