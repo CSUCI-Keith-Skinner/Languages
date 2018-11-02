@@ -21,8 +21,6 @@ int main(void) {
             "plus", "minus", "multiply", "divide", "modulus"
     };
 
-    freopen("../flex_t1in.txt", "r", stdin);
-
     while ((tok = yylex()) != 0) {
         if (tok == ID_TOKEN)
             printf("{<identifier> \"%s\"}", yytext);
