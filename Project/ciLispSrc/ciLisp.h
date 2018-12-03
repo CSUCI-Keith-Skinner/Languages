@@ -36,11 +36,19 @@ typedef enum oper
     CBRT,
     HYPOT,
     PRINT,
+    RAND,
     EQUAL,
     SMALLER,
     LARGER,
     INVALID_OPER=255
 } OPER_TYPE;
+
+typedef enum
+{
+    VARIABLE_TYPE,
+    LAMBDA_TYPE,
+    ARG_TYPE
+} SYMBOL_TYPE;
 
 typedef enum 
 { 
@@ -54,6 +62,11 @@ typedef struct return_value
   DATA_TYPE type;
   double value;
 } RETURN_VALUE;
+
+typedef struct stack_node {
+    struct ast_node *val;
+    struct stack_node *next;
+} STACK_NODE;
 
 
 typedef enum {
@@ -102,12 +115,18 @@ typedef struct ast_node
     struct ast_node * next;
 } AST_NODE;
 
+typedef struct stack_node {
+    struct ast_node *val;
+    struct stack_node *next;
+} STACK_NODE;
+
 typedef struct symbol_table_node 
 {
-   DATA_TYPE val_type;
-   char *ident;
-   struct ast_node *val;
-   struct symbol_table_node *next;
+    SYMBOL_TYPE type;
+    DATA_TYPE val_type;
+    char *ident;
+    struct STACK_NODE * stack;
+    struct symbol_table_node *next;
 } SYMBOL_TABLE_NODE;
 
 

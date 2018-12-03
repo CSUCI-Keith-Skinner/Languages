@@ -42,12 +42,14 @@ DATA_TYPE resolveType(char * type)
     return NO_TYPE;
 }
 
+
+
 SYMBOL_TABLE_NODE * let_elem(char * type, char * name, AST_NODE * s_expr)
 {
     SYMBOL_TABLE_NODE * p = calloc(1, sizeof(SYMBOL_TABLE_NODE));
     p->val_type = resolveType(type);
     p->ident = name;
-    p->val = s_expr;
+    p->stack = s_expr;
     return p;
 }
 
