@@ -61,13 +61,8 @@ int resolveFunc(char *func)
         "mult", "div",  "remainder",
         "log",  "pow",  "max",
         "min",  "exp2", "cbrt",
-<<<<<<< HEAD
         "hypot", "print", "equal",
         "smaller", "larger", ""
-=======
-        "hypot", "print", "equal", "smaller",
-        "larger", ""
->>>>>>> 7215257... Done with task 6
     };
 
     int i = 0;
