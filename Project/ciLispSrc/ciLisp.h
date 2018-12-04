@@ -114,11 +114,6 @@ typedef struct ast_node
     struct ast_node * next;
 } AST_NODE;
 
-typedef struct stack_node {
-    struct ast_node *val;
-    struct stack_node *next;
-} STACK_NODE;
-
 typedef struct symbol_table_node 
 {
     SYMBOL_TYPE type;
