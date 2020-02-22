@@ -1,0 +1,21 @@
+/**
+* Name: Keith Skinner
+* Lab: Lab 8 Introduction to Bison
+* Date: 10/30/2018
+**/
+
+SIE-1119-04:cmake-build-debug brian.skinner121$ ./calc
+
+> (add (exp (sub 3.5 (sqrt 15))) (log (remainder (pow 3 (sqrt 20)) 5.2)))
+0.545349
+
+> (div 5 6)
+0.833333
+
+> 1234234
+1234234.000000
+
+> (neg 3454)
+-3454.000000
+
+> quit

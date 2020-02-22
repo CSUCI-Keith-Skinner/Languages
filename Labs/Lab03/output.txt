@@ -1,0 +1,140 @@
+/**
+* Name: Keith Skinner
+* Lab: Lab 2 Personnel Records
+* Date: 09/25/2018
+**/
+Enter the initial number of records:
+     Name:       Age:    Height:  Birthday: 
+     Name:       Age:    Height:  Birthday: 
+     Name:       Age:    Height:  Birthday: 
+     Name:       Age:    Height:  Birthday: 
+     Name:       Age:    Height:  Birthday: 
+     Name:       Age:    Height:  Birthday: 
+     Name:       Age:    Height:  Birthday: 
+
+DISPLAYING DATABASE
+
+     Name: Zach
+      Age: 22
+   Height: 5.8
+ Birthday: 2/20/1989
+
+     Name: Maya
+      Age: 21
+   Height: 5.9
+ Birthday: 8/2/1990
+
+     Name: Ange
+      Age: 23
+   Height: 5.6
+ Birthday: 7/3/1987
+
+     Name: Greg
+      Age: 22
+   Height: 6.2
+ Birthday: 4/15/1989
+
+     Name: Matt
+      Age: 24
+   Height: 6.5
+ Birthday: 6/5/1986
+
+     Name: Bob
+      Age: 50
+   Height: 8.0
+ Birthday: 3/23/1900
+
+     Name: Frank
+      Age: 100
+   Height: 9.0
+ Birthday: 5/4/1923
+
+
+--> Searching database for Maya
+
+     Name: Maya
+      Age: 21
+   Height: 5.9
+ Birthday: 8/2/1990
+
+--> Removing Maya from database
+
+DISPLAYING DATABASE
+
+     Name: Zach
+      Age: 22
+   Height: 5.8
+ Birthday: 2/20/1989
+
+     Name: Ange
+      Age: 23
+   Height: 5.6
+ Birthday: 7/3/1987
+
+     Name: Greg
+      Age: 22
+   Height: 6.2
+ Birthday: 4/15/1989
+
+     Name: Matt
+      Age: 24
+   Height: 6.5
+ Birthday: 6/5/1986
+
+     Name: Bob
+      Age: 50
+   Height: 8.0
+ Birthday: 3/23/1900
+
+     Name: Frank
+      Age: 100
+   Height: 9.0
+ Birthday: 5/4/1923
+
+
+--> Adding new record to database
+     Name:       Age:    Height:  Birthday: 
+
+DISPLAYING DATABASE
+
+     Name: Zach
+      Age: 22
+   Height: 5.8
+ Birthday: 2/20/1989
+
+     Name: Ange
+      Age: 23
+   Height: 5.6
+ Birthday: 7/3/1987
+
+     Name: Greg
+      Age: 22
+   Height: 6.2
+ Birthday: 4/15/1989
+
+     Name: Matt
+      Age: 24
+   Height: 6.5
+ Birthday: 6/5/1986
+
+     Name: Bob
+      Age: 50
+   Height: 8.0
+ Birthday: 3/23/1900
+
+     Name: Frank
+      Age: 100
+   Height: 9.0
+ Birthday: 5/4/1923
+
+     Name: AJ
+      Age: 99
+   Height: 88.0
+ Birthday: 1/1/1919
+
+
+--> Clearing database
+
+DISPLAYING DATABASE
+
+  The database is empty.
